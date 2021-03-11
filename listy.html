@@ -50,7 +50,7 @@
 </body>
 <script>
 	function makeNewDiv(){
-		/* make the div and its text */
+
 		let element = document.createElement("div")
 		element.innerHTML = document.getElementById("listname").value
 		element.className = "listy"
@@ -69,11 +69,11 @@
                 }
             }
             if (r == 0) {
-                listyItems[0].remove();
+				var rand=Math.floor(Math.random()*(listyItems.length-0)+0)
+                listyItems[rand].remove();
             }
         }
 
-		/* add it to the container */
 		document.getElementById('target').appendChild(element)
 		
 	}
